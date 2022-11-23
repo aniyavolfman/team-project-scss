@@ -1,4 +1,10 @@
+.soc-list{
+  display: flex;
+}
 .soc-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
   border-radius: 50%;
