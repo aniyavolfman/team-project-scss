@@ -44,6 +44,9 @@ border: 1 px solid transparent;
 text-align: center;
 margin:0 auto;
 margin-bottom: 16px;
+display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 @include tablet{
@@ -84,6 +87,7 @@ text-align: center;
 letter-spacing: 0.02em;
 color: #FCFCFC;
 margin-bottom: 28px;
+
 
 @include tablet{
   margin-bottom: 0;
