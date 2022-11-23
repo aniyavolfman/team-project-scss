@@ -1,5 +1,7 @@
-.soc-list{
+.soc-list {
   display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
 }
 .soc-item {
   display: flex;
@@ -10,6 +12,54 @@
   border-radius: 50%;
   background-color: #f8d24e;
 }
+.soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f8d24e;
+}
 .footer .icon {
   fill: #84a178;
+}
+
+.footer__link {
+  color: #fcfcfc;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.footer__contact {
+  color: #131313;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.footer__copy {
+  border-top: 1px solid #e1e1e1;
+  font-size: 14px;
+  color: rgba(122, 122, 122, 1);
+  line-height: 1.52;
+}
+
+.footer {
+  &__homemade {
+    color: #fcfcfc;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__passion {
+    color: #fcfcfc;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 }
