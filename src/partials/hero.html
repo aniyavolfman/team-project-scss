@@ -2,8 +2,8 @@
     <div class="container hero__container">
         <div class="hero__thumb">
             <div class="hero__text">
-                <h1 class="hero__title">ice cream
-                    made with
+                <h1 class="hero__title">ice cream<br>
+                    made with<br>
                     passion</h1>
                 <ul class="hero__list list">
                     <li class="hero__items"><a class="hero__link--poducts link" href="#">Products</a></li>
@@ -33,6 +33,17 @@
                     </svg></a>
             </div>
         </div>
-        <img class="hero__img" src="./images/hero-faces.png" alt="Ice-cream">
+        <div class="hero__img-container">
+            <picture class="hero__img">
+                <source srcset=" ./images//hero-faces.png 1x, 
+                                                  ./images//hero-faces.png 2x" media="(min-width: 1200px)" />
+                <source srcset=" ./images//hero-faces-tab.png 1x, 
+                                                  ./images//hero-faces-tab.png 2x" media="(min-width: 768px)" />
+                <source srcset=" ./images//hero-faces-mob.png 1x, 
+                                                  ./images//hero-faces-mob.png 2x" media="(max-width: 767px)" />
+                <img class="hero__img" src="./images//hero-faces.png" alt="Ice-cream" width="268" />
+            </picture>
+            <div class="hero__img-blur"></div>
+        </div>
     </div>
 </section>

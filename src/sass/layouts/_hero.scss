@@ -1,25 +1,127 @@
 .hero {
+  position: relative;
   display: flex;
   max-width: 100%;
   padding: 0;
-
-  @include tablet {
-    max-width: 720px;
-  }
-  @include desktop {
-    max-width: 1200px;
-  }
+  margin: 0 auto;
+  background-image: url(../images/hero-dots-mob.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 
 .hero__container {
-  padding-top: 100px;
-  flex-grow: 1;
+  padding-top: 50px;
+  padding-bottom: 236px;
 
   @include tablet {
-    padding-top: 84px;
+    padding-top: 16px;
   }
 
-  @include tablet {
+  @include desktop {
     padding-top: 112px;
+    flex-grow: 1;
   }
+}
+
+.hero__thumb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__title {
+  margin-bottom: 32px;
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.hero__list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero__link--poducts {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  color: #000000;
+  padding: 11px 26px;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+}
+
+.hero__link--made {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  color: #f8d24e;
+  text-decoration: underline;
+}
+
+.hero__statistic-list {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__statistic-items {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero__statistic-number {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34 / 28);
+  text-align: right;
+  text-transform: uppercase;
+  color: #131313;
+}
+
+.hero__statistic-text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  text-align: right;
+}
+
+.hero__description {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__img-blur {
+  width: 200px;
+  height: 300px;
+  background: rgba(252, 252, 252, 0.44);
+  filter: blur(26.8405px);
+}
+
+.hero__img {
+  width: 176px;
+  position: absolute;
+  z-index: 1;
+}
+
+.hero__img-container {
+  width: 182px;
+  height: 236px;
+  position: absolute;
+  display: flex;
+  bottom: -17;
+  left: 46%;
+  transform: translateX(-50%);
 }
