@@ -19,4 +19,7 @@
     refs.menu.classList.add('visually-hidden');
     refs.body.classList.remove('no-scroll');
   }
+  
 })();
+
+new Swiper('.image-slider');
