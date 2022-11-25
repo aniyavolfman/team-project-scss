@@ -76,6 +76,7 @@
   font-weight: 600;
   font-size: 10px;
   line-height: calc(15 / 12);
+  cursor: url('../images/cursor-ice.png'), auto;
 
   @include mobile {
     font-size: 12px;
@@ -277,6 +278,7 @@
 
 .hero__description-link {
   color: #fcfcfc;
+  cursor: url('../images/cursor-ice.png'), auto;
 }
 
 .hero__description-icon {
