@@ -8,6 +8,15 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+
+  @include tablet {
+    max-width: 768px;
+    background-image: url(../images/hero-dots-tab.svg);
+  }
+  @include desktop {
+    max-width: 1200px;
+    background-image: url(../images/hero-dots-desk.svg);
+  }
 }
 
 .hero__container {
@@ -16,17 +25,25 @@
 
   @include tablet {
     padding-top: 16px;
+    padding-bottom: 24px;
   }
 
   @include desktop {
-    padding-top: 112px;
-    flex-grow: 1;
+    padding-top: 45px;
+    padding-bottom: 103px;
   }
 }
 
 .hero__thumb {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 39px;
+
+  @include desktop {
+    align-items: baseline;
+    margin-bottom: 109px;
+  }
 }
 
 .hero__title {
@@ -40,6 +57,11 @@
   @include tablet {
     margin-bottom: 24px;
   }
+
+  @include desktop {
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
 }
 
 .hero__list {
@@ -48,24 +70,36 @@
   align-items: center;
 }
 
-.hero__link--poducts {
-  display: block;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(15 / 12);
-  color: #000000;
-  padding: 11px 26px;
-  border: 2px solid #f8d24e;
-  border-radius: 8px;
-}
-
+.hero__link--poducts,
 .hero__link--made {
   display: block;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
+.hero__link--poducts {
+  color: #000000;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+  padding: 11px 26px;
+
+  @include desktop {
+    padding: 12px 34px;
+  }
+}
+
+.hero__link--made {
   color: #f8d24e;
   text-decoration: underline;
+
+  @include desktop {
+    padding: 12px 34px;
+  }
 }
 
 .hero__statistic-list {
@@ -77,6 +111,10 @@
 .hero__statistic-items {
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -88,6 +126,10 @@
   text-align: right;
   text-transform: uppercase;
   color: #131313;
+
+  @include desktop {
+    font-size: 46px;
+  }
 }
 
 .hero__statistic-text {
@@ -95,33 +137,117 @@
   font-size: 8px;
   line-height: calc(10 / 8);
   text-align: right;
-}
 
-.hero__description {
-  @media (max-width: 767px) {
-    display: none;
+  @include desktop {
+    font-size: 14px;
   }
 }
 
 .hero__img-blur {
-  width: 200px;
-  height: 300px;
+  border-radius: 50%;
+  width: 182px;
+  height: 236px;
   background: rgba(252, 252, 252, 0.44);
-  filter: blur(26.8405px);
+  filter: blur(51.9859px);
+  transform: translateX(-16px) rotate(37deg) translateY(-21px);
+
+  @include tablet {
+    width: 266px;
+    height: 342px;
+  }
+
+  @include desktop {
+    width: 477px;
+    height: 590px;
+    // filter: blur(50px);
+  }
 }
 
 .hero__img {
-  width: 176px;
   position: absolute;
   z-index: 1;
+  width: 176px;
+  top: 0;
+  left: 0;
+
+  @include tablet {
+    width: 268px;
+  }
+
+  @include desktop {
+    width: 456px;
+  }
 }
 
 .hero__img-container {
-  width: 182px;
-  height: 236px;
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
   bottom: -17;
   left: 46%;
-  transform: translateX(-50%);
+
+  @include tablet {
+    bottom: -9px;
+    left: 68%;
+  }
+
+  @include desktop {
+    bottom: -30px;
+    left: 73%;
+  }
+}
+
+.hero__description {
+  padding-left: 184px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @include desktop {
+    padding-left: 241px;
+  }
+}
+
+.hero__description-img {
+  position: absolute;
+  width: 152px;
+  left: 0px;
+  bottom: -8px;
+
+  @include desktop {
+    width: 225px;
+    bottom: -20px;
+  }
+}
+
+.hero__description-container {
+  width: 151px;
+
+  @include desktop {
+    width: 220px;
+  }
+}
+
+.hero__description-text {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(17 / 12);
+
+  @include desktop {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.hero__description-link {
+  color: #fcfcfc;
+}
+
+.hero__description-icon {
+  fill: currentColor;
 }
