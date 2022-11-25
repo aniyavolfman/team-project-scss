@@ -72,7 +72,7 @@ img {
   border-radius: 10px;
   border: none;
   background: #f8d24e;
-  cursor: pointer;
+  cursor: url('../images/cursor-ice.png'), auto;
 
   &:hover {
     background: #0a8817;
