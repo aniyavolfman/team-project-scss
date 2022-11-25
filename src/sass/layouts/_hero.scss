@@ -1,0 +1,286 @@
+.hero {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-image: url(../images/hero-dots-mob.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @include tablet {
+    max-width: 768px;
+    background-image: url(../images/hero-dots-tab.svg);
+  }
+  @include desktop {
+    max-width: 1200px;
+    background-image: url(../images/hero-dots-desk.svg);
+  }
+}
+
+.hero__container {
+  padding-top: 50px;
+  padding-bottom: 236px;
+
+  @include tablet {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  @include desktop {
+    padding-top: 45px;
+    padding-bottom: 103px;
+  }
+}
+
+.hero__thumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 39px;
+
+  @include desktop {
+    align-items: baseline;
+    margin-bottom: 109px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 32px;
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
+}
+
+.hero__list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero__link--poducts,
+.hero__link--made {
+  display: block;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: calc(15 / 12);
+  cursor: url('../images/cursor-ice.png'), auto;
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
+.hero__link--poducts {
+  padding: 9px 23px;
+  color: #000000;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+
+  &:hover {
+    border: 2px solid #0a8817;
+  }
+
+  @include mobile {
+    padding: 11px 26px;
+  }
+
+  @include desktop {
+    border-radius: 10px;
+    padding: 12px 34px;
+
+    &:focus,
+    &:active {
+      color: #fcfcfc;
+    }
+  }
+}
+
+.hero__link--made {
+  color: #f8d24e;
+  text-decoration: underline;
+
+  &:hover {
+    color: #0a8817;
+  }
+
+  &:focus,
+  &:active {
+    color: #fcfcfc;
+  }
+
+  @include desktop {
+    padding: 12px 34px;
+  }
+}
+
+.hero__statistic-list {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero__statistic-items {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.hero__statistic-number {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34 / 28);
+  text-align: right;
+  text-transform: uppercase;
+  color: #131313;
+
+  @include desktop {
+    font-size: 46px;
+  }
+}
+
+.hero__statistic-text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  text-align: right;
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
+.hero__img-blur {
+  border-radius: 50%;
+  width: 182px;
+  height: 236px;
+  background: rgba(252, 252, 252, 0.44);
+  filter: blur(51.9859px);
+  transform: translateX(-16px) rotate(37deg) translateY(-21px);
+
+  @include tablet {
+    width: 266px;
+    height: 342px;
+  }
+
+  @include desktop {
+    width: 477px;
+    height: 590px;
+    // filter: blur(50px);
+  }
+}
+
+.hero__img {
+  position: absolute;
+  z-index: 1;
+  width: 176px;
+  top: 0;
+  left: 0;
+
+  @include tablet {
+    width: 268px;
+  }
+
+  @include desktop {
+    width: 456px;
+  }
+}
+
+.hero__img-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  bottom: -17;
+  left: 50%;
+
+  @include mobile {
+    left: 46%;
+  }
+
+  @include tablet {
+    bottom: -9px;
+    left: 68%;
+  }
+
+  @include desktop {
+    bottom: -29px;
+    left: 73%;
+  }
+}
+
+.hero__description {
+  padding-left: 184px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @include desktop {
+    padding-left: 241px;
+  }
+}
+
+.hero__description-img {
+  position: absolute;
+  width: 152px;
+  left: 0px;
+  bottom: -8px;
+
+  @include desktop {
+    width: 225px;
+    bottom: -20px;
+  }
+}
+
+.hero__description-container {
+  width: 151px;
+
+  @include desktop {
+    width: 220px;
+  }
+}
+
+.hero__description-text {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(17 / 12);
+
+  @include desktop {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.hero__description-link {
+  color: #fcfcfc;
+  cursor: url('../images/cursor-ice.png'), auto;
+}
+
+.hero__description-icon {
+  fill: currentColor;
+}

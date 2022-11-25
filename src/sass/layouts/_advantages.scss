@@ -1,0 +1,88 @@
+.advantages {
+  background-color: #84a178;
+  padding-bottom: 60px;
+  @include tablet {
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-bottom: 180px;
+  }
+}
+.container-adv {
+  max-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+.invisible {
+  display: none;
+}
+.advantages-list {
+  list-style: none;
+
+  @include desktop {
+    display: flex;
+  }
+}
+.insite {
+  width: 50px;
+  height: 50px;
+  background: #f8d24e;
+  border-radius: 25px;
+  border: 1 px solid transparent;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+.advantages-list_title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #fcfcfc;
+
+  @include tablet {
+    font-size: 48px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+    font-size: 58px;
+  }
+}
+.advantages-list_text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #fcfcfc;
+  margin-bottom: 28px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}

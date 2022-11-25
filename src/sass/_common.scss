@@ -7,6 +7,7 @@ body {
   letter-spacing: 0.04em;
   color: #fcfcfc;
   background: #84a178;
+  cursor: url('../images/cursor-ice.png'), auto;
 }
 
 .link {
@@ -14,6 +15,11 @@ body {
 }
 
 .list {
+  list-style: none;
+}
+
+li,
+ul {
   list-style: none;
 }
 
@@ -36,7 +42,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 .container {
@@ -63,18 +68,21 @@ img {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
-  color: #131313;
+  color: #000000;
   border-radius: 10px;
   border: none;
   background: #f8d24e;
+  cursor: url('../images/cursor-ice.png'), auto;
 
   &:hover {
     background: #0a8817;
+    cursor: url('../images/cursor-ice.png'), auto;
   }
 
   &:active,
   &:focus {
     color: #fcfcfc;
+    cursor: url('../images/cursor-ice.png'), auto;
   }
 }
 
