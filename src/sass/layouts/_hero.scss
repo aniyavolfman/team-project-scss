@@ -74,8 +74,12 @@
 .hero__link--made {
   display: block;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 10px;
   line-height: calc(15 / 12);
+
+  @include mobile {
+    font-size: 12px;
+  }
 
   @include desktop {
     font-size: 14px;
@@ -83,19 +87,42 @@
 }
 
 .hero__link--poducts {
+  padding: 9px 23px;
   color: #000000;
   border: 2px solid #f8d24e;
   border-radius: 8px;
-  padding: 11px 26px;
+
+  &:hover {
+    border: 2px solid #0a8817;
+  }
+
+  @include mobile {
+    padding: 11px 26px;
+  }
 
   @include desktop {
+    border-radius: 10px;
     padding: 12px 34px;
+
+    &:focus,
+    &:active {
+      color: #fcfcfc;
+    }
   }
 }
 
 .hero__link--made {
   color: #f8d24e;
   text-decoration: underline;
+
+  &:hover {
+    color: #0a8817;
+  }
+
+  &:focus,
+  &:active {
+    color: #fcfcfc;
+  }
 
   @include desktop {
     padding: 12px 34px;
@@ -186,7 +213,11 @@
   align-items: center;
   transform: translateX(-50%);
   bottom: -17;
-  left: 46%;
+  left: 50%;
+
+  @include mobile {
+    left: 46%;
+  }
 
   @include tablet {
     bottom: -9px;
@@ -194,7 +225,7 @@
   }
 
   @include desktop {
-    bottom: -30px;
+    bottom: -29px;
     left: 73%;
   }
 }
