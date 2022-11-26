@@ -21,7 +21,7 @@
   }
   
 })();
-
+import './js/about';
 new Swiper('.image-slider', {
   pagination: {
     el: '.swiper-pagination',
