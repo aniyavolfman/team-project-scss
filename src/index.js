@@ -19,11 +19,10 @@
     refs.menu.classList.add('visually-hidden');
     refs.body.classList.remove('no-scroll');
   }
-  
 })();
 
-
 import './js/products.js';
+import './js/buy-now.js';
 
 new Swiper('.image-slider', {
   pagination: {
@@ -31,4 +30,3 @@ new Swiper('.image-slider', {
     clickable: true,
   },
 });
-
