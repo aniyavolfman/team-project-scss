@@ -1,0 +1,41 @@
+.gallery{
+  background: #F5F5F5;
+  position: relative;
+  height: 97px;
+  @include mobile{
+    height: 155px;
+  }
+  @include tablet{
+    height: 160px;
+  }
+  @include desktop{
+    height: 320px;
+  }
+.gallery-wrapp{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+}
+.gallery-img{
+  border-radius: 7.40681px;
+  position: absolute;
+  padding: 0px 20px;
+  top:-20px;
+  @include mobile{
+    top: -30px;
+  }
+
+  @include tablet{
+    padding: 0px 32px;
+    top: -140px;
+  }
+  @include desktop{
+    padding: 0px 94px;
+    top: -100px;
+  }
+}
+
+.gallery-picture{
+  border-radius: 7px;
+}
