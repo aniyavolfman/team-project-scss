@@ -9,7 +9,7 @@
     height: 160px;
   }
   @include desktop{
-    height: 320px;
+height: 0;
   }
 .gallery-wrapp{
   display: flex;
