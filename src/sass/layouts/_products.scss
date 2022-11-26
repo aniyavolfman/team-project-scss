@@ -373,6 +373,7 @@
 .products-list__button {
   border: none;
   background-color: transparent;
+  cursor: url('../images/cursor-ice.png'), auto;
 }
 
 // modal--------------------------------------
@@ -428,6 +429,7 @@
   top: 12px;
   right: 12px;
   padding: 0;
+  cursor: url('../images/cursor-ice.png'), auto;
 }
 
 .modal-products__header {
@@ -605,6 +607,7 @@
   line-height: 1.21;
   border: none;
   background: #f8d24e;
+  cursor: url('../images/cursor-ice.png'), auto;
 }
 
 .modal-products__header::before {
