@@ -33,7 +33,7 @@
     margin: 24px 0;
   }
 
-  &> address{
+  & > address {
     text-align: left;
   }
 }
@@ -176,4 +176,118 @@
   @extend .contact__btn;
   background: transparent;
   border: 2px solid #f8d24e;
+}
+
+// Popup
+
+// Popup location
+
+.popup-location {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.popup-location__body {
+  width: 280px;
+  height: 365px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #131313;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: scroll;
+}
+
+.popup-contact__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24px / 16px);
+  margin-bottom: 20px;
+  color: #131313;
+  text-align: center;
+}
+
+.popup-location__map {
+  width: 100%;
+  height: 199px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+.popup-location__btn {
+  height: 42px;
+  width: 134px;
+}
+
+.popup-location__link {
+  text-decoration: none;
+  color: #131313;
+}
+
+.popup-location__btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+}
+
+// Popup francise
+
+.popup-francise {
+  @extend .popup-location;
+  overflow: scroll;
+}
+
+.popup-francise__body {
+  width: 280px;
+  padding: 27px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.popup-francise__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-francise__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #131313;
+  line-height: calc(20px / 14px);
+}
+
+.popup-francise__input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #84a178;
+  background: #f8d24e1a;
+  padding: 12px 8px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(17px / 12px);
+  &-comment {
+    @extend .popup-francise__input;
+    resize: none;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
 }
