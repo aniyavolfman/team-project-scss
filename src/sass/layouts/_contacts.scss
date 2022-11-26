@@ -15,6 +15,7 @@
   }
   @include desktop {
     width: 1136px;
+    gap: 32px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -30,6 +31,10 @@
     border: 1px solid #e1e1e1;
     background: #e1e1e1;
     margin: 24px 0;
+  }
+
+  &> address{
+    text-align: left;
   }
 }
 .contact__title {
@@ -51,6 +56,13 @@
     @extend .contact__title;
     width: 130px;
   }
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .contact__subtitle {
   font-family: 'Montserrat';
@@ -60,14 +72,32 @@
   letter-spacing: 0.04em;
   color: #131313;
   margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
-.contact__adress {
+
+.contact__address {
   font-family: 'Montserrat';
   font-weight: 500;
   font-size: 12px;
   line-height: calc(22 / 12);
   letter-spacing: 0.04em;
   color: #d6936d;
+  text-decoration: none;
+  font-style: normal;
+  cursor: url('../images/cursor-ice.png'), auto;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .contact__subtitle-date {
   font-family: 'Montserrat';
@@ -75,6 +105,13 @@
   font-size: 12px;
   line-height: calc(22 / 12);
   color: #131313;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .contact-subtitle-time {
   font-family: 'Montserrat';
@@ -84,6 +121,13 @@
   line-height: calc(22 / 12);
   color: #ababab;
   margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .contact__information {
   font-family: 'Montserrat';
@@ -92,18 +136,31 @@
   line-height: calc(22 / 12);
   color: #131313;
   text-decoration: none;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 // Buttons
 
 .contact__buttons {
+  margin-top: 20px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
     margin-top: 20px;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-        flex-direction: row;
-    }
+    flex-direction: row;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+    flex-direction: row;
+  }
 }
 
 .contact__btn {
@@ -113,7 +170,6 @@
 
 .contact__btn-location {
   @extend .contact__btn;
-  
 }
 
 .contact__btn-franchise {
