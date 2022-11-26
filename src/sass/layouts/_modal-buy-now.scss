@@ -1,0 +1,405 @@
+.backdrop-buy-now {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-buy-now {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%) scale(1);
+  width: 280px;
+  background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  padding: 28px;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+
+  .backdrop-buy-now.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  @include tablet {
+    width: 568px;
+  }
+
+  @media screen and (max-height: 1000px) and (max-width: 768px) {
+    top: 55%;
+  }
+
+  @media screen and (max-height: 900px) and (max-width: 768px) {
+    top: 65%;
+  }
+
+  @media screen and (max-height: 765px) and (max-width: 768px) {
+    top: 75%;
+  }
+
+  @media screen and (max-height: 665px) and (max-width: 768px) {
+    top: 85%;
+  }
+
+  @media screen and (max-height: 580px) and (max-width: 768px) {
+    top: 95%;
+  }
+}
+
+.modal-buy-now__close-btn-container {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.modal-buy-now__close-btn {
+  cursor: url('../images/cursor-ice.png'), auto;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #131313;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-buy-now__close-btn-img {
+  fill: currentColor;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.modal-buy-now__form {
+  margin: 0 auto;
+}
+
+.modal-buy-now__content {
+  position: relative;
+}
+
+.modal-buy-now__title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(28 / 20);
+  text-align: center;
+  color: #131313;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.modal-buy-now__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.modal-buy-now__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  text-align: center;
+  text-transform: uppercase;
+  color: #131313;
+}
+
+.modal-buy-now__items--ice-cream::before,
+.modal-buy-now__items--coffee::before,
+.modal-buy-now__items--milkshake::before {
+  top: 50%;
+  bottom: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-buy-now__items--ice-cream::before {
+  content: '';
+  position: absolute;
+  display: block;
+  z-index: 2;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  transform: translateY(-224%);
+  background-image: url(../images/ice-cream-products-mob-1x-min.jpg);
+  @include retina {
+    background-image: url(../images/ice-cream-products-mob-2x-min.jpg);
+  }
+
+  @include tablet {
+    transform: translateY(-57%);
+    background-image: url(../images/ice-cream-products-tab-1x-min.jpg);
+
+    @include retina {
+      background-image: url(../images/ice-cream-products-tab-2x-min.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/ice-cream-products-desk-1x-min.jpg);
+    @include retina {
+      background-image: url(../images/ice-cream-products-desk-2x-min.jpg);
+    }
+  }
+}
+
+.modal-buy-now__items--coffee::before {
+  content: '';
+  position: absolute;
+  display: block;
+  z-index: 2;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  transform: translateY(-58%);
+  background-image: url(../images/ice-cream2-products-mob-1x-min.jpg);
+
+  @include retina {
+    background-image: url(../images/ice-cream2-products-mob-2x-min.jpg);
+  }
+
+  @include tablet {
+    transform: translateY(-57%);
+    background-image: url(../images/ice-cream2-products-tab-1x-min.jpg);
+    @include retina {
+      background-image: url(../images/ice-cream2-products-tab-2x-min.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/ice-cream2-products-desk-1x-min.jpg);
+    @include retina {
+      background-image: url(../images/ice-cream2-products-desk-2x-min.jpg);
+    }
+  }
+}
+
+.modal-buy-now__items--milkshake::before {
+  content: '';
+  position: absolute;
+  display: block;
+  z-index: 2;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  transform: translateY(108%);
+
+  background-image: url(../images/ice-cream3-products-mob-1x-min.jpg);
+
+  @include retina {
+    background-image: url(../images/ice-cream3-products-mob-2x-min.jpg);
+  }
+
+  @include tablet {
+    transform: translateY(-57%);
+    background-image: url(../images/ice-cream3-products-tab-1x-min.jpg);
+
+    @include retina {
+      background-image: url(../images/ice-cream3-products-tab-2x-min.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/ice-cream3-products-desk-1x-min.jpg);
+    @include retina {
+      background-image: url(../images/ice-cream3-products-desk-2x-min.jpg);
+    }
+  }
+}
+
+.modal-buy-now__description {
+  margin-top: 83px;
+  width: 132px;
+  height: 136px;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 15.7808px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: #fcfcfc;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-93%);
+    display: block;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    @include desktop {
+      transform: translateY(-93%);
+    }
+  }
+}
+
+.modal-buy-now__description--ice-cream {
+  border: 2px solid #96af8c;
+
+  &::before {
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #96af8c;
+  }
+}
+
+.modal-buy-now__description--coffee {
+  border: 2px solid #efd478;
+
+  &::before {
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #efd478;
+  }
+}
+
+.modal-buy-now__description--milkshake {
+  border: 2px solid #d6936d;
+
+  &::before {
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #d6936d;
+  }
+}
+
+.modal-buy-now__form {
+  margin-top: 28px;
+
+  @include tablet {
+    margin-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.modal-buy-now__field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-buy-now__input {
+  height: 32px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(20 / 14);
+    color: #131313;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  @include tablet {
+    height: 42px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.modal-buy-now__comment {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding-left: 12px;
+  padding-top: 11px;
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 65px;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(20 / 14);
+    color: #131313;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  @include tablet {
+    height: 84px;
+    padding-left: 16px;
+  }
+}
+
+.modal-buy-now__send-btn {
+  min-width: 114px;
+  height: 42px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 24px;
+
+  @include tablet {
+    min-width: 121px;
+    margin-top: 32px;
+  }
+}

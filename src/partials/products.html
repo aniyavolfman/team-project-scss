@@ -1,46 +1,48 @@
 <section class="section-products" id="products">
     <div class="container-products container">
-        <p class="container-products_text">100% natural</p>
-        <h2 class="container-products_header">products</h2>
+        <p class="container-products__text">100% natural</p>
+        <h2 class="container-products__header">products</h2>
         <ul class="products-list list">
-            <li class="products-list_item products-list_item--ice-cream products-list_item--green ">
-                <div class="products-list_top products-list_top--circle products-list_top--green">
-                    <h3 class="product-list_title">ice cream</h3>
-                    <p class="product-list_text">Soft ice cream with a delicate taste. Made with milk, cream, sugar and
+            <li class="products-list__item products-list__item--ice-cream products-list__item--green ">
+                <div class="products-list__top products-list__top--circle products-list__top--green">
+                    <h3 class="product-list__title">ice cream</h3>
+                    <p class="product-list__text">Soft ice cream with a delicate taste. Made with milk, cream, sugar and
                         natural stabilizer</p>
                 </div>
-                <div class="products-list_bottom">
-                    <button type="button" class="products-list_button">
+                <div class="products-list__bottom">
+                    <button type="button" class="products-list__button" data-modal-products-open1>
                         <svg width="40" height="16">
                             <use href="./images/icons.svg#icon-arrow-black"></use>
                         </svg>
                     </button>
                 </div>
             </li>
-            <li class="products-list_item products-list_item--coffee products-list_item--yellow">
-                <div class="products-list_top products-list_top--circle products-list_top--yellow">
-                    <h3 class="product-list_title">ice coffee</h3>
-                    <p class="product-list_text">Fragrant invigorating drink created from 100% natural ingredients
-                        without
+
+            <li class="products-list__item products-list__item--coffee products-list__item--yellow">
+                <div class="products-list__top products-list__top--circle products-list__top--yellow">
+                    <h3 class="product-list__title">ice coffee</h3>
+                    <p class="product-list__text">Fragrant invigorating drink created from 100% natural ingredients without
+
                         the use of preservatives and flavor enhancers</p>
                 </div>
-                <div class="products-list_bottom">
-                    <button type="button" class="products-list_button">
+                <div class="products-list__bottom">
+                    <button type="button" class="products-list__button" data-modal-products-open2>
                         <svg width="40" height="16">
                             <use href="./images/icons.svg#icon-arrow-black"></use>
                         </svg>
                     </button>
                 </div>
             </li>
-            <li class="products-list_item products-list_item--shakes products-list_item--brown">
-                <div class="products-list_top products-list_top--circle products-list_top--brown">
-                    <h3 class="product-list_title">milkshakes</h3>
-                    <p class="product-list_text">Sweet drinks based on milk and ice cream, supplemented with syrups,
-                        fruits,
+
+            <li class="products-list__item products-list__item--shakes products-list__item--brown">
+                <div class="products-list__top products-list__top--circle products-list__top--brown">
+                    <h3 class="product-list__title">milkshakes</h3>
+                    <p class="product-list__text">Sweet drinks based on milk and ice cream, supplemented with syrups, fruits,
+
                         berries and other sweets of your choice</p>
                 </div>
-                <div class="products-list_bottom">
-                    <button type="button" class="products-list_button">
+                <div class="products-list__bottom">
+                    <button type="button" class="products-list__button" data-modal-products-open3>
                         <svg width="40" height="16">
                             <use href="./images/icons.svg#icon-arrow-black"></use>
                         </svg>
@@ -48,5 +50,76 @@
                 </div>
             </li>
         </ul>
+    </div>
+    <div class="backdrop-products is-hidden" data-modal-products>
+        <div class="modal-products" data-modal-products>
+            <button class="modal-products__button" data-modal-products-close>
+                <svg  width="20" height="20">
+                    <use href="./images/icons.svg#icon-close-broducts"></use>
+                </svg>
+            </button>
+            <h3 class="modal-products__header">Chololate icecream</h3>
+            <ul class="products-box">
+                <li class="modal-products__item">
+                    <p class="modal-products__top">320</p>
+                    <p class="modal-products__bottom">kcal</p>
+                </li>
+                <li class="modal-products__item">
+                    <p class="modal-products__top">4g</p>
+                    <p class="modal-products__bottom">Prote...</p>
+                </li>
+                <li class="modal-products__item">
+                    <p class="modal-products__top">8,2g</p>
+                    <p class="modal-products__bottom">Fats</p>
+                </li>
+                <li class="modal-products__item">
+                    <p class="modal-products__top">40,4g</p>
+                    <p class="modal-products__bottom">Carbs</p>
+                </li>
+                </ul>
+            <p class="modal-products__subheader">Ingredients</p>
+            <ul class="products-ingredients">
+                <li class="products-ingredients__item">
+                    <span>Milk</span>
+                    <span>100ml</span>
+                </li>
+                <li class="products-ingredients__item">
+                    <span>Belgian chocolate</span>
+                    <span>20g</span>
+                </li>
+                <li class="products-ingredients__item">
+                    <span>Cream</span>
+                    <span>150 ml</span>
+                </li>
+                <li class="products-ingredients__item">
+                    <span>Cocoa powder</span>
+                    <span>30g</span>
+                </li>
+                <li class="products-ingredients__item">
+                    <span>Sugar</span>
+                    <span>40g</span>
+                </li>
+                <li class="products-ingredients__item">
+                    <span>Vanilla sugar</span>
+                    <span>10g</span>
+                </li>
+            </ul>
+            <form class="products-modal-form">
+                <div class="products-name-field">
+                    <label for="products-modal-name">Name</label>
+                    <input type="text" name="products-modal-name" id="products-modal-name">
+                </div>
+                <div class="products-phone-field">
+                    <label for="products-modal-phone">Phone</label>
+                    <input type="tel" name="products-modal-phone" id="products-modal-phone">
+                </div>
+                <div class="products-text-field">
+                    <label for="products-modal-text">Comment</label>
+                    <textarea name="products-modal-text" id="products-modal-text" placeholder="Comment"></textarea>
+                </div>
+                <button type="submit" class="products-modal-form__button">Submit
+                </button>
+            </form>
+        </div>
     </div>
 </section>
