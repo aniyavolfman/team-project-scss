@@ -1,0 +1,123 @@
+.contacts > .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact {
+  width: 280px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  @include tablet {
+    width: 704px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    width: 1136px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact__card {
+  grid-column-end: 1 span;
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  & > hr {
+    border: 1px solid #e1e1e1;
+    background: #e1e1e1;
+    margin: 24px 0;
+  }
+}
+.contact__title {
+  width: 80px;
+  height: 22px;
+  border-radius: 4px;
+  background-color: #f8d24e;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &-middle {
+    @extend .contact__title;
+    width: 130px;
+  }
+}
+.contact__subtitle {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  letter-spacing: 0.04em;
+  color: #131313;
+  margin-bottom: 8px;
+}
+.contact__adress {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  letter-spacing: 0.04em;
+  color: #d6936d;
+}
+.contact__subtitle-date {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #131313;
+}
+.contact-subtitle-time {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #ababab;
+  margin-bottom: 8px;
+}
+.contact__information {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #131313;
+  text-decoration: none;
+}
+
+// Buttons
+
+.contact__buttons {
+    margin-top: 20px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+.contact__btn {
+  width: 196px;
+  height: 42px;
+}
+
+.contact__btn-location {
+  @extend .contact__btn;
+  
+}
+
+.contact__btn-franchise {
+  @extend .contact__btn;
+  background: transparent;
+  border: 2px solid #f8d24e;
+}
