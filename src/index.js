@@ -19,6 +19,16 @@
     refs.menu.classList.add('visually-hidden');
     refs.body.classList.remove('no-scroll');
   }
+  
 })();
 
+
 import './js/products.js';
+
+new Swiper('.image-slider', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+

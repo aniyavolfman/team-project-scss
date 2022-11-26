@@ -1,0 +1,293 @@
+.contacts > .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact {
+  width: 280px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  @include tablet {
+    width: 704px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    width: 1136px;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact__card {
+  grid-column-end: 1 span;
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  & > hr {
+    border: 1px solid #e1e1e1;
+    background: #e1e1e1;
+    margin: 24px 0;
+  }
+
+  & > address {
+    text-align: left;
+  }
+}
+.contact__title {
+  width: 80px;
+  height: 22px;
+  border-radius: 4px;
+  background-color: #f8d24e;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &-middle {
+    @extend .contact__title;
+    width: 130px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contact__subtitle {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  letter-spacing: 0.04em;
+  color: #131313;
+  margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.contact__address {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  letter-spacing: 0.04em;
+  color: #d6936d;
+  text-decoration: none;
+  font-style: normal;
+  cursor: url('../images/cursor-ice.png'), auto;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contact__subtitle-date {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #131313;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contact-subtitle-time {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #ababab;
+  margin-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contact__information {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(22 / 12);
+  color: #131313;
+  text-decoration: none;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+// Buttons
+
+.contact__buttons {
+  margin-top: 20px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    margin-top: 20px;
+    flex-direction: row;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+    flex-direction: row;
+  }
+}
+
+.contact__btn {
+  width: 196px;
+  height: 42px;
+}
+
+.contact__btn-location {
+  @extend .contact__btn;
+}
+
+.contact__btn-franchise {
+  @extend .contact__btn;
+  background: transparent;
+  border: 2px solid #f8d24e;
+}
+
+// Popup
+
+// Popup location
+
+.popup-location {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.popup-location__body {
+  width: 280px;
+  height: 365px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #131313;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: scroll;
+}
+
+.popup-contact__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24px / 16px);
+  margin-bottom: 20px;
+  color: #131313;
+  text-align: center;
+}
+
+.popup-location__map {
+  width: 100%;
+  height: 199px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+.popup-location__btn {
+  height: 42px;
+  width: 134px;
+}
+
+.popup-location__link {
+  text-decoration: none;
+  color: #131313;
+}
+
+.popup-location__btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+}
+
+// Popup francise
+
+.popup-francise {
+  @extend .popup-location;
+  overflow: scroll;
+}
+
+.popup-francise__body {
+  width: 280px;
+  padding: 27px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.popup-francise__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-francise__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: #131313;
+  line-height: calc(20px / 14px);
+}
+
+.popup-francise__input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #84a178;
+  background: #f8d24e1a;
+  padding: 12px 8px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(17px / 12px);
+  &-comment {
+    @extend .popup-francise__input;
+    resize: none;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+}

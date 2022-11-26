@@ -21,7 +21,7 @@
 
   &:hover,
   &:focus {
-    cursor: pointer;
+    cursor: url('../images/cursor-ice.png'), auto;
   }
 
   &:hover .icon,
@@ -51,6 +51,7 @@
     font-weight: 700;
     font-size: 12px;
     text-decoration: none;
+    cursor: url('../images/cursor-ice.png'), auto;
     @include tablet {
       font-size: 14px;
     }

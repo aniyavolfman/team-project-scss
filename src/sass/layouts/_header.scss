@@ -1,8 +1,3 @@
-.header {
-  position: absolute;
-  width: 100%;
-}
-
 .header__container {
   display: flex;
   align-items: center;
@@ -17,6 +12,7 @@
   }
 
   @include desktop {
+    justify-content: space-between;
     padding-top: 8px;
   }
 }
@@ -24,6 +20,7 @@
 .header__logo {
   width: 40px;
   height: 37px;
+  cursor: url('../images/cursor-ice.png'), auto;
 
   @include tablet {
     width: 48px;
@@ -36,7 +33,25 @@
   }
 }
 
-.header__content {
+.header__list {
+  display: flex;
+  gap: 28px;
+}
+
+.header__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  color: #fcfcfc;
+  cursor: url('../images/cursor-ice.png'), auto;
+
+  &:hover,
+  &:focus {
+    color: #f8d24e;
+  }
+}
+
+.header__btn-container {
   display: flex;
   gap: 32px;
   align-items: center;
@@ -59,18 +74,20 @@
 }
 
 .header-mobile {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  background-color: #84a178;
-  top: 0;
-  padding: 12px 32px 64px 32px;
+  @media screen and (min-width: 1px) and (max-width: 1199px) {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #84a178;
+    top: 0;
+    padding: 12px 32px 64px 32px;
+  }
 
-  @include tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     justify-content: flex-start;
     padding-top: 20px;
     background-color: #97af8d;
@@ -91,6 +108,10 @@
     top: 32px;
     right: 32px;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__mobile-nav {
@@ -101,10 +122,18 @@
     margin-top: 76px;
     margin-bottom: 0;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__mobile-list {
   text-align: center;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__mobile-items {
@@ -115,16 +144,33 @@
       margin-bottom: 40px;
     }
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__mobile-link {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 20px;
   line-height: calc(39 / 32);
   color: #fcfcfc;
 
+  @include mobile {
+    font-size: 32px;
+  }
+
   @include tablet {
     font-size: 48px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #131313;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 
@@ -132,6 +178,10 @@
   margin: 0 auto;
 
   @include tablet {
+    display: none;
+  }
+
+  @include desktop {
     display: none;
   }
 }
@@ -142,10 +192,15 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__btn-icon {
   margin-left: 4px;
+  fill: currentColor;
 }
 
 .header__nav {
