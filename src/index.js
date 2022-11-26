@@ -22,7 +22,7 @@
     refs.body.classList.remove('no-scroll');
   }
 })();
-
+import './js/about.js';
 import './js/products.js';
 import './js/buy-now.js';
 
