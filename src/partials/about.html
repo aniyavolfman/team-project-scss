@@ -26,7 +26,7 @@
           </p>
         </div>
         <div class="about__btn-nav">
-          <button type="button" class="btn about__btn">
+          <button type="button" class="btn about__btn" data-modal-about-open>
             Read more
             <svg class="about__btn-icon" width="12" height="12">
               <use href="./images/icons.svg#icon-btn-arrow"></use>
@@ -36,5 +36,24 @@
       </div>
     </div>
   </div>
-
 </section>
+
+<div class="backdrop-about is-hidden" data-modal-about>
+  <div class="modal-about" data-modal-products>
+    <button class="modal-about__button" data-modal-about-close>
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#icon-modal-about-close"></use>
+      </svg>
+    </button>
+    <h3 class="modal-about__header">How it’s made?</h3>
+    <div class="video">
+      <video controls class="video__item" src="./images/icecream.mp4"></video>
+    </div>
+
+    <p class="modal-about__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
+</div>
