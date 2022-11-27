@@ -1,16 +1,15 @@
 .about {
   background-color: #84a178;
   padding-top: 61px;
-  padding-bottom: 50px;
+
 
   @include tablet {
     padding-top: 72px;
-    padding-bottom: 80px;
   }
 
   @include desktop {
     padding-top: 60px;
-    // padding-bottom: 146px;
+    padding-bottom: 60px;
   }
 }
 
@@ -243,7 +242,10 @@
   align-items: center;
   flex-direction: column;
   width: 85%;
-
+  overflow-y: scroll;
+  position: fixed;
+   transition: transform .25s cubic-bezier(.4, 0, .2, 1);
+      transition: opacity .25s cubic-bezier(.4, 0, .2, 1), visibility .25s cubic-bezier(.4, 0, .2, 1);
   @include tablet {
     width: 568px;
   }
@@ -251,7 +253,7 @@
   border: 2px solid #f8d24e;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%, -50%) scale(1);
   padding: 28px 28px;
   @include tablet {
     padding: 32px 60px;
@@ -306,8 +308,7 @@
     margin-top: 32px;
   }
 }
-.video {
-}
+
 .video__item {
   width: 224px;
   height: 199px;
