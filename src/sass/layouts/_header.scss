@@ -45,6 +45,10 @@
   color: #fcfcfc;
   cursor: url('../images/cursor-ice.png'), auto;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     color: #f8d24e;
