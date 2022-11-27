@@ -4,11 +4,25 @@
   flex-direction: column;
 }
 
+.contacts {
+  margin-bottom: 60px;
+  margin-top: -353px;
+  @include tablet {
+    margin-top: -299px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-top: -128px;
+    margin-bottom: 120px;
+  }
+}
+
 .contact {
   width: 280px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 16px;
+  
   @include tablet {
     width: 704px;
     grid-template-columns: repeat(3, 1fr);
@@ -152,13 +166,16 @@
   gap: 16px;
   display: flex;
   flex-direction: column;
+
   @include tablet {
     margin-top: 20px;
+
     flex-direction: row;
   }
 
   @include desktop {
     margin-top: 60px;
+
     flex-direction: row;
   }
 }
@@ -183,29 +200,37 @@
 // Popup location
 
 .popup-location {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
+  @extend .backdrop-buy-now;
 }
 
 .popup-location__body {
   width: 280px;
   height: 365px;
+  color: #131313;
+  background-color: #fff;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  @include desktop{
+    width: 568px;
+    height: 458px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.popup-location__content {
+  position: relative;
   padding: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #131313;
-  background-color: #fff;
-  border-radius: 10px;
-  position: relative;
-  overflow: scroll;
 }
 
 .popup-contact__title {
@@ -217,6 +242,9 @@
   margin-bottom: 20px;
   color: #131313;
   text-align: center;
+  @include desktop{
+    font-size: 20px;
+  }
 }
 
 .popup-location__map {
@@ -224,6 +252,10 @@
   height: 199px;
   margin-bottom: 24px;
   border-radius: 10px;
+  @include desktop{
+    width: 448px;
+    height: 260px;
+  }
 }
 
 .popup-location__btn {
@@ -242,52 +274,127 @@
   right: 16px;
   border: none;
   background: transparent;
+  @include desktop{
+    font-size: 20px;
+  }
+}
+
+.popup-location__btn-close > svg > use {
+  @include desktop {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 // Popup francise
 
 .popup-francise {
   @extend .popup-location;
-  overflow: scroll;
 }
 
 .popup-francise__body {
   width: 280px;
-  padding: 27px;
+  height: 674px;
+  position: absolute;
   background-color: #fff;
   border-radius: 10px;
+  border: 2px solid #f8d24e;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 28px;
+  @include desktop{
+    width: 568px;
+    height: 668px;
+    margin-top: auto;
+   
+  
+  }
+}
+
+.popup-francise__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 28px;
+  @include desktop{
+    padding: 32px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  }
+}
+
+.popup-francise__title {
+  font-family: Seymour One;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: calc(24px / 16px);
+  margin-bottom: 20px;
+  text-align: center;
+  color: #131313;
+  @include desktop{
+    font-size: 20px;
+    padding: 0 63px;
+    text-align: center;
+  }
+}
+
+.popup-francise__text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  color: #131313;
+  line-height: calc(20px / 14px);
+  letter-spacing: 0em;
+  margin-bottom: 24px;
+  @include desktop{
+    font-size: 16px;
+  }
 }
 
 .popup-francise__form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
-.popup-francise__text {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 24px;
-  color: #131313;
-  line-height: calc(20px / 14px);
-}
-
 .popup-francise__input {
-  width: 100%;
+  width: 224px;
+  height: 32px;
   border-radius: 10px;
   border: 1px solid #84a178;
   background: #f8d24e1a;
-  padding: 12px 8px;
+  padding-left: 8px;
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 12px;
   line-height: calc(17px / 12px);
   &-comment {
     @extend .popup-francise__input;
+    height: 64px;
     resize: none;
-    border-radius: 10px;
-    margin-bottom: 12px;
+    @include desktop{
+      height: 84px;
+    }
+  }
+  @include desktop{
+    font-size: 14px;
+    width: 368px;
+    height: 42px;
+  }
+}
+
+.popup-francise__btn {
+  height: 42px;
+  width: 114px;
+  @include desktop{
+    font-size: 14px;
+    margin-top: 20px;
   }
 }
