@@ -93,6 +93,10 @@
   border: 2px solid #f8d24e;
   border-radius: 8px;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover {
     border: 2px solid #0a8817;
   }
@@ -115,6 +119,10 @@
 .hero__link--made {
   color: #f8d24e;
   text-decoration: underline;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     color: #0a8817;
