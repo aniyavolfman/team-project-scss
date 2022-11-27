@@ -29,6 +29,7 @@
   &:focus .icon,
   &:active .icon {
     fill: #ffffff;
+    cursor: url('../images/cursor-ice.png'), auto;
   }
 }
 
