@@ -20,6 +20,8 @@
   height: 34px;
   border-radius: 50%;
   background-color: #f8d24e;
+  transition-property: fill;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -59,6 +61,7 @@
     font-weight: 700;
     font-size: 12px;
     text-decoration: none;
+
     cursor: url('../images/cursor-ice.png'), auto;
     @include tablet {
       font-size: 14px;
