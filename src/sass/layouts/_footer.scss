@@ -3,6 +3,7 @@
   flex-direction: row-reverse;
   gap: 20px;
   margin-bottom: 20px;
+  cursor: url('../images/cursor-ice.png'), auto;
   @include tablet {
     margin-bottom: 32px;
   }
@@ -11,6 +12,7 @@
   }
 }
 .soc-item {
+  cursor: url('../images/cursor-ice.png'), auto;
   display: flex;
   align-items: center;
   justify-content: center;
