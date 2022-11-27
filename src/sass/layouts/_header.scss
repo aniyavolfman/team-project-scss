@@ -160,6 +160,10 @@
   line-height: calc(39 / 32);
   color: #fcfcfc;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   @include mobile {
     font-size: 32px;
   }
