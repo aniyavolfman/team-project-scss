@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 16px;
-
+  
   @include tablet {
     width: 704px;
     grid-template-columns: repeat(3, 1fr);
@@ -187,18 +187,12 @@
 
 .contact__btn-location {
   @extend .contact__btn;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact__btn-franchise {
   @extend .contact__btn;
   background: transparent;
   border: 2px solid #f8d24e;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 // Popup
@@ -222,7 +216,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  @include desktop {
+  @include desktop{
     width: 568px;
     height: 458px;
     display: flex;
@@ -248,7 +242,7 @@
   margin-bottom: 20px;
   color: #131313;
   text-align: center;
-  @include desktop {
+  @include desktop{
     font-size: 20px;
   }
 }
@@ -258,7 +252,7 @@
   height: 199px;
   margin-bottom: 24px;
   border-radius: 10px;
-  @include desktop {
+  @include desktop{
     width: 448px;
     height: 260px;
   }
@@ -267,9 +261,6 @@
 .popup-location__btn {
   height: 42px;
   width: 134px;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .popup-location__link {
@@ -283,8 +274,7 @@
   right: 16px;
   border: none;
   background: transparent;
-  cursor: url('../images/cursor-ice.png'), auto;
-  @include desktop {
+  @include desktop{
     font-size: 20px;
   }
 }
@@ -315,10 +305,12 @@
   left: 0;
   margin: auto;
   margin-top: 28px;
-  @include desktop {
+  @include desktop{
     width: 568px;
     height: 668px;
     margin-top: auto;
+   
+  
   }
 }
 
@@ -327,12 +319,13 @@
   height: 100%;
   position: relative;
   padding: 28px;
-  @include desktop {
+  @include desktop{
     padding: 32px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
   }
 }
 
@@ -344,7 +337,7 @@
   margin-bottom: 20px;
   text-align: center;
   color: #131313;
-  @include desktop {
+  @include desktop{
     font-size: 20px;
     padding: 0 63px;
     text-align: center;
@@ -359,7 +352,7 @@
   line-height: calc(20px / 14px);
   letter-spacing: 0em;
   margin-bottom: 24px;
-  @include desktop {
+  @include desktop{
     font-size: 16px;
   }
 }
@@ -386,11 +379,11 @@
     @extend .popup-francise__input;
     height: 64px;
     resize: none;
-    @include desktop {
+    @include desktop{
       height: 84px;
     }
   }
-  @include desktop {
+  @include desktop{
     font-size: 14px;
     width: 368px;
     height: 42px;
@@ -400,10 +393,7 @@
 .popup-francise__btn {
   height: 42px;
   width: 114px;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @include desktop {
+  @include desktop{
     font-size: 14px;
     margin-top: 20px;
   }
