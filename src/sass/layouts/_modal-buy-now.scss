@@ -75,7 +75,9 @@
   outline: none;
   color: #131313;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-buy-now__close-btn-img {
@@ -266,6 +268,10 @@
 .modal-buy-now__description--ice-cream {
   border: 2px solid #96af8c;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &::before {
     background: linear-gradient(
         0deg,
@@ -285,6 +291,10 @@
 .modal-buy-now__description--coffee {
   border: 2px solid #efd478;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   &::before {
     background: linear-gradient(
         0deg,
@@ -303,6 +313,10 @@
 
 .modal-buy-now__description--milkshake {
   border: 2px solid #d6936d;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &::before {
     background: linear-gradient(
