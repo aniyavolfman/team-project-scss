@@ -71,16 +71,15 @@ img {
   color: #000000;
   border-radius: 10px;
   border: none;
-  background: #f8d24e;
+  background-color: #f8d24e;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: url('../images/cursor-ice.png'), auto;
 
   &:hover {
-    background: #0a8817;
+    background-color: #0a8817;
     cursor: url('../images/cursor-ice.png'), auto;
   }
 
