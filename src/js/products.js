@@ -1,51 +1,47 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-products-open1]"),
-    closeModalBtn: document.querySelector("[data-modal-products-close]"),
-    modal: document.querySelector("[data-modal-products]"),
+    openModalBtn1: document.querySelector('[data-modal-products-open1]'),
+    openModalBtn2: document.querySelector('[data-modal-products-open2]'),
+    openModalBtn3: document.querySelector('[data-modal-products-open3]'),
+    closeModalBtn: document.querySelector('[data-modal-products-close]'),
+    modalBackdrop: document.querySelector('[data-modal-products]'),
+    submitButton: document.querySelector('.products-modal-form__button'),
   };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  
+  refs.openModalBtn1.addEventListener('click', toggleModal);
+  refs.openModalBtn2.addEventListener('click', toggleModal);
+  refs.openModalBtn3.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.modalBackdrop.addEventListener('click', onEscPress);
+  refs.submitButton.addEventListener('click', onButtonSubmit);
 
   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+    refs.modalBackdrop.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
+    window.addEventListener('keydown', onEscPress);
+  }
+
+  function onEscPress(event) {
+    if (event.code === 'Escape') {
+      refs.modalBackdrop.classList.toggle('is-hidden');
+      window.removeEventListener('keydown', onEscPress);
+      document.body.classList.toggle('no-scroll');
+    }
+
+    if (event.target === event.currentTarget) {
+      refs.modalBackdrop.classList.toggle('is-hidden');
+      document.body.classList.toggle('no-scroll');
+    }
+  }
+
+  function onButtonSubmit(event) {
+    event.preventDefault();
+    refs.modalBackdrop.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll');
   }
 })();
 
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-modal-products-open2]"),
-    closeModalBtn: document.querySelector("[data-modal-products-close]"),
-    modal: document.querySelector("[data-modal-products]"),
-  };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
-
-
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-modal-products-open3]"),
-    closeModalBtn: document.querySelector("[data-modal-products-close]"),
-    modal: document.querySelector("[data-modal-products]"),
-  };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
-
-
-// Contact popup 
+// Contact popup
 
 (() => {
   const refs = {

@@ -380,10 +380,9 @@
 
 .backdrop-products {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  display: flex;
+  padding: 20px;
   background: rgba(248, 210, 78, 0.1);
   opacity: 1;
   visibility: visible;
@@ -397,31 +396,29 @@
     transform: translate(-50%, -50%) scale(0.9);
   }
 
-  z-index: 3;
-  overflow-y: scroll;
+  z-index: 10;
+  overflow-y: auto;
 }
 
 .modal-products {
-  position: absolute;
+  position: relative;
+  margin: auto;
+  min-width: 280px;
+    @include tablet {
+      min-width: 568px;
+    }
+  padding: 28px 20px;
+  @include tablet {
+      padding: 32px 40px;
+    }
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 90%;
-  @include tablet {
-    width: 568px;
-  }
   border-radius: 10px;
   border: 2px solid #f8d24e;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  padding: 28px 20px;
-  @include tablet {
-    padding: 32px 40px;
-  }
   text-align: center;
-  z-index: 1;
+  z-index: 50;
   color: #131313;
   background: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
