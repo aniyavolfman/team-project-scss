@@ -1,4 +1,4 @@
-.advantages {
+.information {
   position: relative;
   background-color: #84a178;
   padding-bottom: 60px;
@@ -28,7 +28,7 @@
 .invisible {
   display: none;
 }
-.advantages-list {
+.information-list {
   list-style: none;
 
   @include tablet {
@@ -39,7 +39,7 @@
   @include desktop {
   }
 }
-.advantages-list_item {
+.information-list_item {
   @include tablet {
     max-width: 152px;
   }
@@ -67,7 +67,7 @@
     margin-bottom: 40px;
   }
 }
-.advantages-list_title {
+.information-list_title {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -87,7 +87,7 @@
     font-size: 58px;
   }
 }
-.advantages-list_text {
+.information-list_text {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
